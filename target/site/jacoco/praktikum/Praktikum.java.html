@@ -6,34 +6,34 @@ import java.util.List;
 
     public static void main(String[] args) {
         // Инициализируем базу данных
-<span class="fc" id="L9">        Database database = new Database();</span>
+<span class="nc" id="L9">        Database database = new Database();</span>
 
         // Создадим новый бургер
-<span class="fc" id="L12">        Burger burger = new Burger();</span>
+<span class="nc" id="L12">        Burger burger = new Burger();</span>
 
         // Считаем список доступных булок из базы данных
-<span class="fc" id="L15">        List&lt;Bun&gt; buns = database.availableBuns();</span>
+<span class="nc" id="L15">        List&lt;Bun&gt; buns = database.availableBuns();</span>
 
         // Считаем список доступных ингредиентов из базы данных
-<span class="fc" id="L18">        List&lt;Ingredient&gt; ingredients = database.availableIngredients();</span>
+<span class="nc" id="L18">        List&lt;Ingredient&gt; ingredients = database.availableIngredients();</span>
 
         // Соберём бургер
-<span class="fc" id="L21">        burger.setBuns(buns.get(0));</span>
+<span class="nc" id="L21">        burger.setBuns(buns.get(0));</span>
 
-<span class="fc" id="L23">        burger.addIngredient(ingredients.get(1));</span>
-<span class="fc" id="L24">        burger.addIngredient(ingredients.get(4));</span>
-<span class="fc" id="L25">        burger.addIngredient(ingredients.get(3));</span>
-<span class="fc" id="L26">        burger.addIngredient(ingredients.get(5));</span>
+<span class="nc" id="L23">        burger.addIngredient(ingredients.get(1));</span>
+<span class="nc" id="L24">        burger.addIngredient(ingredients.get(4));</span>
+<span class="nc" id="L25">        burger.addIngredient(ingredients.get(3));</span>
+<span class="nc" id="L26">        burger.addIngredient(ingredients.get(5));</span>
 
         // Переместим слой с ингредиентом
-<span class="fc" id="L29">        burger.moveIngredient(2, 1);</span>
+<span class="nc" id="L29">        burger.moveIngredient(2, 1);</span>
 
         // Удалим ингредиент
-<span class="fc" id="L32">        burger.removeIngredient(3);</span>
+<span class="nc" id="L32">        burger.removeIngredient(3);</span>
 
         // Распечатаем рецепт бургера
-<span class="fc" id="L35">        System.out.println(burger.getReceipt());</span>
-<span class="fc" id="L36">    }</span>
+<span class="nc" id="L35">        System.out.println(burger.getReceipt());</span>
+<span class="nc" id="L36">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

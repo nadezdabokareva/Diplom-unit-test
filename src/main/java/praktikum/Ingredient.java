@@ -31,8 +31,6 @@ public class Ingredient {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Ingredient)) return false;
 
         Ingredient that = (Ingredient) o;
 

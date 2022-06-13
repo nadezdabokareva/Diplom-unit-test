@@ -41,17 +41,15 @@ public class DatabaseTest {
 
     @Test
     public void addBun() {
-        Database database = Mockito.mock(Database.class);
+        Database database = new Database();
         Bun bun = new Bun("white bun", 200);
-        Mockito.when(database.addBun(bun)).thenReturn(true);
         assertTrue(database.addBun(bun));
     }
 
     @Test
     public void addIngredient() {
-        Database database = Mockito.mock(Database.class);
+        Database database = new Database();
         Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "sour cream", 200);
-        Mockito.when(database.addIngredient(ingredient)).thenReturn(true);
         assertTrue(database.addIngredient(ingredient));
     }
 }

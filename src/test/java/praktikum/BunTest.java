@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 @RunWith(Parameterized.class)
 public class BunTest {
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
                 {"black bun", 100}

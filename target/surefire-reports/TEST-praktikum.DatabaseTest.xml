@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="praktikum.DatabaseTest" time="1.145" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="praktikum.DatabaseTest" time="0.016" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,8 +60,8 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="praktikum.DatabaseTest" name="addBun" time="1.142"/>
-  <testcase classname="praktikum.DatabaseTest" name="addIngredient" time="0.003"/>
-  <testcase classname="praktikum.DatabaseTest" name="availableIngredients" time="0"/>
+  <testcase classname="praktikum.DatabaseTest" name="addBun" time="0.015"/>
+  <testcase classname="praktikum.DatabaseTest" name="addIngredient" time="0"/>
+  <testcase classname="praktikum.DatabaseTest" name="availableIngredients" time="0.001"/>
   <testcase classname="praktikum.DatabaseTest" name="availableBuns" time="0"/>
 </testsuite>

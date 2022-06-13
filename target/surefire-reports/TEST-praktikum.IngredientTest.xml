@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="praktikum.IngredientTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="praktikum.IngredientTest" time="0.007" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,10 +60,10 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="praktikum.IngredientTest" name="getName[0]" time="0"/>
-  <testcase classname="praktikum.IngredientTest" name="getType[0]" time="0"/>
-  <testcase classname="praktikum.IngredientTest" name="getPrice[0]" time="0"/>
-  <testcase classname="praktikum.IngredientTest" name="getName[1]" time="0.002"/>
-  <testcase classname="praktikum.IngredientTest" name="getType[1]" time="0"/>
-  <testcase classname="praktikum.IngredientTest" name="getPrice[1]" time="0"/>
+  <testcase classname="praktikum.IngredientTest" name="getName[Тестовые данные: SAUCE hot sauce]" time="0"/>
+  <testcase classname="praktikum.IngredientTest" name="getType[Тестовые данные: SAUCE hot sauce]" time="0"/>
+  <testcase classname="praktikum.IngredientTest" name="getPrice[Тестовые данные: SAUCE hot sauce]" time="0.007"/>
+  <testcase classname="praktikum.IngredientTest" name="getName[Тестовые данные: FILLING cutlet]" time="0"/>
+  <testcase classname="praktikum.IngredientTest" name="getType[Тестовые данные: FILLING cutlet]" time="0"/>
+  <testcase classname="praktikum.IngredientTest" name="getPrice[Тестовые данные: FILLING cutlet]" time="0"/>
 </testsuite>

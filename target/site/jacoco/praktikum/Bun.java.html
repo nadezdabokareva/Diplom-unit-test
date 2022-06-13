@@ -25,12 +25,11 @@ public class Bun {
     @Override
     public boolean equals(Object o) {
 <span class="pc bpc" id="L27" title="1 of 2 branches missed.">        if (this == o) return true;</span>
-<span class="pc bpc" id="L28" title="1 of 2 branches missed.">        if (!(o instanceof Bun)) return false;</span>
 
-<span class="fc" id="L30">        Bun bun = (Bun) o;</span>
+<span class="fc" id="L29">        Bun bun = (Bun) o;</span>
 
-<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (Float.compare(bun.getPrice(), getPrice()) != 0) return false;</span>
-<span class="fc" id="L33">        return getName().equals(bun.getName());</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (Float.compare(bun.getPrice(), getPrice()) != 0) return false;</span>
+<span class="fc" id="L32">        return getName().equals(bun.getName());</span>
     }
 
 }

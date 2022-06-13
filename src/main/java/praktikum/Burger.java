@@ -19,7 +19,6 @@ public class Burger {
     }
 
     public void addIngredient(Ingredient ingredient) {
-
         ingredients.add(ingredient);
     }
 
@@ -55,6 +54,15 @@ public class Burger {
         receipt.append(String.format("%nPrice: %f%n", getPrice()));
 
         return receipt.toString();
+    }
+
+    public Bun getBun() {
+        return bun;
+    }
+
+
+    public List<Ingredient> getIngredients() {
+        return ingredients;
     }
 
 }

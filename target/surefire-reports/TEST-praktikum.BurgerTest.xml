@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="praktikum.PraktikumTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="18" failures="0" name="praktikum.BurgerTest" time="1.157" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,5 +60,22 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="praktikum.PraktikumTest" name="main" time="0.002"/>
+  <testcase classname="praktikum.BurgerTest" name="addIngredient[Тестовые данные: praktikum.Bun@400cff1a [praktikum.Ingredient@275710fc, praktikum.Ingredient@525f1e4e, praktikum.Ingredient@75f9eccc] 2]" time="1.086"/>
+  <testcase classname="praktikum.BurgerTest" name="removeIngredient[Тестовые данные: praktikum.Bun@400cff1a [praktikum.Ingredient@275710fc, praktikum.Ingredient@525f1e4e, praktikum.Ingredient@75f9eccc] 2]" time="0.005"/>
+  <testcase classname="praktikum.BurgerTest" name="moveIngredient[Тестовые данные: praktikum.Bun@400cff1a [praktikum.Ingredient@275710fc, praktikum.Ingredient@525f1e4e, praktikum.Ingredient@75f9eccc] 2]" time="0.004"/>
+  <testcase classname="praktikum.BurgerTest" name="getPrice[Тестовые данные: praktikum.Bun@400cff1a [praktikum.Ingredient@275710fc, praktikum.Ingredient@525f1e4e, praktikum.Ingredient@75f9eccc] 2]" time="0.013"/>
+  <testcase classname="praktikum.BurgerTest" name="setBuns[Тестовые данные: praktikum.Bun@400cff1a [praktikum.Ingredient@275710fc, praktikum.Ingredient@525f1e4e, praktikum.Ingredient@75f9eccc] 2]" time="0.004"/>
+  <testcase classname="praktikum.BurgerTest" name="getReceipt[Тестовые данные: praktikum.Bun@400cff1a [praktikum.Ingredient@275710fc, praktikum.Ingredient@525f1e4e, praktikum.Ingredient@75f9eccc] 2]" time="0.009"/>
+  <testcase classname="praktikum.BurgerTest" name="addIngredient[Тестовые данные: praktikum.Bun@2b546384 [praktikum.Ingredient@5d740a0f, praktikum.Ingredient@214b199c, praktikum.Ingredient@20d3d15a] 2]" time="0.003"/>
+  <testcase classname="praktikum.BurgerTest" name="removeIngredient[Тестовые данные: praktikum.Bun@2b546384 [praktikum.Ingredient@5d740a0f, praktikum.Ingredient@214b199c, praktikum.Ingredient@20d3d15a] 2]" time="0.002"/>
+  <testcase classname="praktikum.BurgerTest" name="moveIngredient[Тестовые данные: praktikum.Bun@2b546384 [praktikum.Ingredient@5d740a0f, praktikum.Ingredient@214b199c, praktikum.Ingredient@20d3d15a] 2]" time="0.003"/>
+  <testcase classname="praktikum.BurgerTest" name="getPrice[Тестовые данные: praktikum.Bun@2b546384 [praktikum.Ingredient@5d740a0f, praktikum.Ingredient@214b199c, praktikum.Ingredient@20d3d15a] 2]" time="0.003"/>
+  <testcase classname="praktikum.BurgerTest" name="setBuns[Тестовые данные: praktikum.Bun@2b546384 [praktikum.Ingredient@5d740a0f, praktikum.Ingredient@214b199c, praktikum.Ingredient@20d3d15a] 2]" time="0.003"/>
+  <testcase classname="praktikum.BurgerTest" name="getReceipt[Тестовые данные: praktikum.Bun@2b546384 [praktikum.Ingredient@5d740a0f, praktikum.Ingredient@214b199c, praktikum.Ingredient@20d3d15a] 2]" time="0.005"/>
+  <testcase classname="praktikum.BurgerTest" name="addIngredient[Тестовые данные: praktikum.Bun@2893de87 [praktikum.Ingredient@55ca8de8, praktikum.Ingredient@2c34f934] 1]" time="0.002"/>
+  <testcase classname="praktikum.BurgerTest" name="removeIngredient[Тестовые данные: praktikum.Bun@2893de87 [praktikum.Ingredient@55ca8de8, praktikum.Ingredient@2c34f934] 1]" time="0.002"/>
+  <testcase classname="praktikum.BurgerTest" name="moveIngredient[Тестовые данные: praktikum.Bun@2893de87 [praktikum.Ingredient@55ca8de8, praktikum.Ingredient@2c34f934] 1]" time="0.002"/>
+  <testcase classname="praktikum.BurgerTest" name="getPrice[Тестовые данные: praktikum.Bun@2893de87 [praktikum.Ingredient@55ca8de8, praktikum.Ingredient@2c34f934] 1]" time="0.004"/>
+  <testcase classname="praktikum.BurgerTest" name="setBuns[Тестовые данные: praktikum.Bun@2893de87 [praktikum.Ingredient@55ca8de8, praktikum.Ingredient@2c34f934] 1]" time="0.003"/>
+  <testcase classname="praktikum.BurgerTest" name="getReceipt[Тестовые данные: praktikum.Bun@2893de87 [praktikum.Ingredient@55ca8de8, praktikum.Ingredient@2c34f934] 1]" time="0.004"/>
 </testsuite>

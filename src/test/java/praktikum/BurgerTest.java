@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.mockito.Mockito;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,9 +15,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class BurgerTests {
+public class BurgerTest {
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0} {1} {2}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
                 {new Bun("black bun", 100),
@@ -44,16 +45,15 @@ public class BurgerTests {
                     0}
         });
     }
-
     private Bun bun;
     private List<Ingredient> ingredients;
     private Burger burger;
     private int nowIndex;
     private int newIndex;
 
-    public BurgerTests(Bun bun, List<Ingredient> ingredients, int nowIndex, int newIndex) {
-        this.bun = bun;
-        this.ingredients = ingredients;
+    public BurgerTest(Bun bun, List<Ingredient> ingredients, int nowIndex, int newIndex) {
+        createStubBun(bun);
+        createStubIngredients(ingredients);
         this.burger = new Burger();
         this.burger.ingredients.addAll(ingredients);
         this.nowIndex = nowIndex;
@@ -63,27 +63,26 @@ public class BurgerTests {
     @Before
     public void setUp(){
         burger.setBuns(bun);
-        burger.ingredients.clear();
-        burger.ingredients.addAll(ingredients);
+        burger.getIngredients().clear();
+        burger.getIngredients().addAll(ingredients);
     }
 
     @Test
     public void setBuns() {
-        assertEquals(bun, burger.bun);
+        assertEquals(bun, burger.getBun());
     }
 
     @Test
     public void addIngredient() {
-        assertEquals(ingredients, burger.ingredients);
-
+        assertEquals(ingredients, burger.getIngredients());
     }
 
     @Test
     public void removeIngredient() {
-        List<Ingredient> ingredientList = new ArrayList<>(){{addAll(burger.ingredients);}};
+        List<Ingredient> ingredientList = new ArrayList<>(){{addAll(burger.getIngredients());}};
         ingredientList.remove(0);
         burger.removeIngredient(0);
-        assertEquals(ingredientList, burger.ingredients);
+        assertEquals(ingredientList, burger.getIngredients());
     }
 
     @Test
@@ -95,10 +94,10 @@ public class BurgerTests {
     @Test
     public void getPrice() {
         float price = burger.getPrice();
-        float ingredientPrice = burger.ingredients.stream()
+        float ingredientPrice = burger.getIngredients().stream()
                 .map(Ingredient::getPrice)
                 .reduce((aFloat, aFloat2) -> aFloat+=aFloat2).get();
-        float expectedPrice = burger.bun.price * 2 + ingredientPrice;
+        float expectedPrice = burger.getBun().getPrice() * 2 + ingredientPrice;
         assertTrue(expectedPrice == price);
     }
 
@@ -114,5 +113,22 @@ public class BurgerTests {
         receipt.append(String.format("%nPrice: %f%n", burger.getPrice()));
 
         assertEquals(receipt.toString(), burger.getReceipt());
+    }
+
+    private void createStubBun(Bun bun) {
+        this.bun = Mockito.mock(Bun.class);
+        Mockito.when(this.bun.getName()).thenReturn(bun.getName());
+        Mockito.when(this.bun.getPrice()).thenReturn(bun.getPrice());
+    }
+
+    private void createStubIngredients(List<Ingredient> ingredients) {
+        this.ingredients = new ArrayList<>();
+        for (Ingredient ingredient : ingredients) {
+            Ingredient mockIngredient = Mockito.mock(Ingredient.class);
+            Mockito.when(mockIngredient.getName()).thenReturn(ingredient.getName());
+            Mockito.when(mockIngredient.getPrice()).thenReturn(ingredient.getPrice());
+            Mockito.when(mockIngredient.getType()).thenReturn(ingredient.getType());
+            this.ingredients.add(mockIngredient);
+        }
     }
 }
